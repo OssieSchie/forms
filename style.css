@@ -1,0 +1,39 @@
+body {
+  margin: min(1rem, 5svw);
+
+  --fontDark: rgb(45, 39, 39);
+}
+
+form {
+  font-weight: 600;
+  padding: min(1rem, 5svw);
+  border: solid var(--fontDark) 1px;
+  border-bottom: solid var(--fontDark) 2px;
+  border-radius: min(8px, 10svw);
+  color: var(--fontDark);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  width: min(500px, 50svw);
+
+  /* label {
+    border: solid var(--fontDark) 1px;
+  } */
+
+  input {
+    border: solid var(--fontDark) 1px;
+    border-bottom: solid var(--fontDark) 2px;
+    border-radius: min(8px, 10svw);
+    margin-top: min(1rem, 5svh);
+    width: fit-content;
+  }
+
+  > * {
+    margin-top: min(1rem, 5svh);
+
+    display: flex;
+    flex-direction: column;
+  }
+}
