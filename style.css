@@ -4,7 +4,7 @@ body {
   --fontDark: rgb(45, 39, 39);
 }
 
-form {
+fieldset {
   font-weight: 600;
   padding: min(1rem, 5svw);
   border: solid var(--fontDark) 1px;
@@ -26,7 +26,7 @@ form {
     border: solid var(--fontDark) 1px;
     border-bottom: solid var(--fontDark) 2px;
     border-radius: min(8px, 10svw);
-    margin-top: min(1rem, 5svh);
+    margin-top: min(0.83rem, 5svh);
     width: fit-content;
   }
 

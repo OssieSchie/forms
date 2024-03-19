@@ -9,40 +9,66 @@
   </head>
   <body>
     <form>
-      <label for="name"
-        >Name
-        <input type="text" name="name" />
-      </label>
+      <fieldset>
+        <legend>Make Your Own Recipe!</legend>
+        <div class="formField">
+          <label for="name"
+            >Name
+            <input type="text" name="name" />
+          </label>
+        </div>
 
-      <label for="description"
-        >Description
-        <input type="text" name="description" />
-      </label>
+        <div class="formField">
+          <label for="description"
+            >Description
+            <input type="text" name="description" />
+          </label>
+        </div>
 
-      <label for="ingredients"
-        >Ingredients
-        <input type="text" name="ingredients" />
-      </label>
+        <div class="formField">
+          <label for="ingredients"
+            >Ingredients
+            <input type="text" name="ingredients" />
+          </label>
+        </div>
 
-      <label for="servings"
-        >Servings
-        <input type="number" name="servings" />
-      </label>
+        <div class="formField">
+          <label for="servings"
+            >Servings
+            <input type="number" name="servings" />
+          </label>
+        </div>
 
-      <label for="allergens"
-        >Allergens
-        <input type="checkbox" name="allergens" />
-      </label>
+        <div class="formField">
+          <h4>Allergies</h4>
+          <label for="allergens"
+            >Pollen
+            <input type="checkbox" id="pollen" name="allergens" />
+          </label>
+          <label for="allergens"
+            >Hay
+            <input type="checkbox" id="hay" name="allergens" />
+          </label>
+          <label for="allergens"
+            >Almond
+            <input type="checkbox" id="almond" name="allergens" />
+          </label>
+        </div>
 
-      <label for="diet"
-        >Diet
-        <input type="text" name="diet" />
-      </label>
+        <div class="formField">
+          <label for="diet"
+            >Diet
+            <input type="text" name="diet" />
+          </label>
+        </div>
 
-      <label for="studentFriendly"
-        >Student Friendly
-        <input type="checkbox" name="studentFriendly" />
-      </label>
+        <div class="formField">
+          <label for="studentFriendly"
+            >Student Friendly
+            <input type="checkbox" name="studentFriendly" />
+          </label>
+        </div>
+      </fieldset>
     </form>
   </body>
 </html>
