@@ -6,6 +6,15 @@
     <title>Form test</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Workbench&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <form>
@@ -13,88 +22,76 @@
         <legend>Make your own recipe!</legend>
         <div id="infoField">
           <div class="formField">
-            <label for="name">
-              Name
-            </label>
+            <label for="name"> Name </label>
             <input type="text" id="name" name="name" />
-        </div>
-        
-        <div class="formField">
-          <label for="description"
-          >Description
-        </label>
-        <textarea type="text" id="description" name="description">
-        </textarea>
-        <!-- <input type="text" id="description" name="description" /> -->
-      </div>
-      
-      <div class="formField">
-        <label for="ingredients"
-        >Ingredients
-      </label>
-      <textarea type="text" id="ingredients" name="ingredients">
-        </textarea>
-    </div>
-        </div>
-  </fieldset>
-  <hr>
-  <fieldset>
-    <legend>About your recipe</legend>
+          </div>
 
-    <div id="metaField">
-      <div class="formField">
-        <label for="servings">
-          Servings
-        </label>
-        <input type="number" id="servings" name="servings" />
-      </div>
-  
-      <div class="formField">
-        <h4>Allergies:</h4>
-        <p class="hint">Check off any relavant allergies</p>
-  
-        <div class="allergyOptions">
-          <label for="pollen">
-            Pollen
-            <input type="checkbox" id="pollen" name="allergens" />
-          </label>
-  
-          <label for="hay">
-            Hay
-            <input type="checkbox" id="hay" name="allergens" />
-          </label>
-  
-          <label for="almond">
-            Almond
-            <input type="checkbox" id="almond" name="allergens" />
-          </label>
-  
-        </div>
-  
-      </div>
-  
-      <div class="formField">
-        <label for="diet">
-          Diet
-        </label>
-        <select id="diet" name="diet">
-          <option value="none">None</option>
-          <option value="vegetarian">Vegetarian</option>
-          <option value="vegan">Vegan</option>
-          <option value="pescetarian">Pescetarian</option>
-          </select>
-        <!-- <input type="text" id="diet" name="diet" /> -->
-      </div>
-  
-      <div class="formField">
-        <label for="studentFriendly">
-          Student Friendly
-        </label>
-        <input type="checkbox" id="studentFriendly" name="studentFriendly" />
-      </div>
+          <div class="formField">
+            <label for="description">Description </label>
+            <textarea type="text" id="description" name="description">
+            </textarea>
+            <!-- <input type="text" id="description" name="description" /> -->
+          </div>
 
-    </div>
-  
+          <div class="formField">
+            <label for="ingredients">Ingredients </label>
+            <textarea type="text" id="ingredients" name="ingredients">
+            </textarea>
+          </div>
+        </div>
+      </fieldset>
+      <hr />
+      <fieldset>
+        <legend>About your recipe</legend>
+
+        <div id="metaField">
+          <div class="formField">
+            <label for="servings"> Servings </label>
+            <input type="number" id="servings" name="servings" />
+          </div>
+
+          <div class="formField">
+            <h4>Allergies:</h4>
+            <p class="hint">Check off any relavant allergies</p>
+
+            <div class="allergyOptions">
+              <label for="pollen">
+                Pollen
+                <input type="checkbox" id="pollen" name="allergens" />
+              </label>
+
+              <label for="hay">
+                Hay
+                <input type="checkbox" id="hay" name="allergens" />
+              </label>
+
+              <label for="almond">
+                Almond
+                <input type="checkbox" id="almond" name="allergens" />
+              </label>
+            </div>
+          </div>
+
+          <div class="formField">
+            <label for="diet"> Diet </label>
+            <select id="diet" name="diet">
+              <option value="none">None</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="pescetarian">Pescetarian</option>
+            </select>
+            <!-- <input type="text" id="diet" name="diet" /> -->
+          </div>
+
+          <div class="formField">
+            <label for="studentFriendly"> Student Friendly </label>
+            <input
+              type="checkbox"
+              id="studentFriendly"
+              name="studentFriendly"
+            />
+          </div>
+        </div>
       </fieldset>
     </form>
   </body>

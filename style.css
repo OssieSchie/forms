@@ -55,7 +55,7 @@ fieldset {
   input,
   textarea,
   select {
-    border: solid var(--fontDark) 1px;
+    border: double var(--fontDark) 1px;
     border-bottom: solid var(--fontDark) 2px;
     border-radius: min(8px, 10svw);
     margin-top: min(0.4rem, 3svh);
@@ -71,6 +71,7 @@ fieldset {
   legend {
     margin: 0 auto 0 auto;
     font-size: 220%;
+    font-family: "Workbench", sans-serif;
   }
 }
 
