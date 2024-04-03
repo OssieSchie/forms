@@ -1,16 +1,50 @@
-let headersList = {
-  Accept: "application/json",
-  apikey:
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvbXZoeGhocHhqeWxzZG9tdm10Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NTE1MDksImV4cCI6MjAyNjMyNzUwOX0.I2LR0bG62kXNTWyOhEaALU7cOyHKgtmiwBfaO5cYxY0",
+import methodGet from "crud.js";
+
+async function showRecipes(){
+    const response = await methodGet();
+    const el = document.querySelector("template").content;
+    const parent = document.querySelector(".recipes");
+    parent.innerHTML = "";
+    const clone = el.cloneNode(true);
+    response.forEach(rec=>{
+        clone.querySelector("[data-name]").textContent = rec.name;
+        clone.querySelector("[data-origin]").textContent = rec.origin;
+        if(rec.studentFriendly){
+            clone.querySelector(".status").hidden = false;
+
+        } else {
+            clone.querySelector(".status").hidden = true;
+        }
+        clone.querySelectorAll("[data-id").forEach((e) => (e.dataset.id = rec.id));
+        clone.querySelector("button{data-action='delete'").addEventListener("click", async ()=>{
+           await methodDelete(rec.id);
+           await showRecipes();
+        })
+        clone.querySelector("button{data-action='update'").addEventListener("click", async ()=>{
+           await methodPatch(rec.id, !rec.studentFriendly);
+           await showRecipes();
+        })
+        parent.appendChild(clone);
+    })
+}
+
+function handleSubmit(){
+    const form = document.querySelector("form");
+    form.addEventListener("submit", async e=>{
+        console.log(e);
+        // stop refresh
+        e.preventDefault();
+        const formData = new FormData(form);
+        console.log(formData.get("ingredients").split("\n"));
+
+        await createRecipe({
+            name: formData.get("name"),
+            ingredients: formData.get("ingredients").split("\n"),
+            allergens: formData.get("allergens").split("\n")
+            // ---
+        })
+
+        showRecipes();
+    })
 };
-
-let response = await fetch(
-  "https://aomvhxhhpxjylsdomvmt.supabase.co/rest/v1/recipes",
-  {
-    method: "GET",
-    headers: headersList,
-  }
-);
-
-let data = await response.json();
-console.table(data);
+handleSubmit();
