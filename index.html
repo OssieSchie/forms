@@ -6,6 +6,7 @@
     <title>Form test</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="template.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -92,9 +93,52 @@
             />
           </div>
         </div>
+        <!-- <button data-add class="btn">Finish recipe</button> -->
       </fieldset>
+      <input data-submit type="submit">
     </form>
 
+    <section class="recipes"></section>
+
     <!-- template for hver recipe -->
-  </body>
+    <template>
+      <article>
+        <header>
+          <h2>
+            <span data-name>NAME</span>
+            <span data-origin>ORIGIN</span>
+          </h2>
+          <div class="metaInfo">
+            <h3 data-diet>DIET</h3>
+            <h3 data-allergens>allergens</h3>
+            <h3 data-studentFriendly class="status">Student Friendly ✓</h3>
+          </div>
+        </header>
+        <div class="body">
+          <dl>
+            <dt>Ingredients:</dt>
+          </dl>
+          <h3>
+            <span>Servings:</span>
+            <span data-servings></span>
+          </h3>
+          <div class="actions">
+            <button data-id="ID" data-action="update">Update</button>
+            <button data-id="ID" data-action="delete">Delete</button>
+          </div>
+        </div>
+      </article>
+      </template>
+    </body>
 </html>
+
+
+<!-- ingredients json
+servings int
+allergens json
+diet t
+studentFriendly b
+origin t
+name t
+description t
+-->
